@@ -1,11 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "+HDjNizpKstxVHqf23ZJUVwOrmUI7HApCQFi/B/YFSx8UjwhX7KaimYWbeEPnildQeCy8DB00caXTyfRpeYKqA==",
+  "dgSpecHash": "Ui5GdIRW6MyFME1stCPJI24fyez3iBDvw9Ck0N7iFtViaXEyBfSZp4dxFpxNk0SuFY9nQf8PBVWbe6iU7RSEeA==",
   "success": true,
   "projectFilePath": "D:\\C#DB\\EntityFrameworkCore\\Lab - BestPracticesAndArchitecture\\PetStore\\PetStore\\PetStore.Models\\PetStore.Models.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Borislav\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Borislav\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\Borislav\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
   ],
   "logs": []

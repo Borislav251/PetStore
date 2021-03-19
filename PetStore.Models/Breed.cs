@@ -2,6 +2,8 @@
 
 using System.ComponentModel.DataAnnotations;
 
+using PetStore.Common;
+
 namespace PetStore.Models
 {
     public class Breed
@@ -15,7 +17,7 @@ namespace PetStore.Models
         public int Id { get; set; }
 
         [Required]
-        [MinLength(5)]
+        [MinLength(GlobalConstants.BreedNameMinLength)]
         public string Name { get; set; }
 
         public virtual ICollection<Pet> Pets { get; set; }

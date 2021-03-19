@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 using System.ComponentModel.DataAnnotations;
 
+using PetStore.Common;
+
 namespace PetStore.Models
 {
     public class Client
@@ -18,22 +20,22 @@ namespace PetStore.Models
         public string Id { get; set; }
 
         [Required]
-        [MinLength(6)]
+        [MinLength(GlobalConstants.UsernameMinLength)]
         public string Username { get; set; }
 
         [Required]
         public string Password { get; set; }
 
         [Required]
-        [MinLength(6)]
+        [MinLength(GlobalConstants.EmailMinLength)]
         public string Email { get; set; }
 
         [Required]
-        [MinLength(3)]
+        [MinLength(GlobalConstants.ClientNameMinLength)]
         public string FirstName { get; set; }
 
         [Required]
-        [MinLength(3)]
+        [MinLength(GlobalConstants.ClientNameMinLength)]
         public string Lastname { get; set; }
 
         public virtual ICollection<Pet> PetsBought { get; set; }

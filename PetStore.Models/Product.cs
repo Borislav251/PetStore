@@ -2,6 +2,7 @@
 
 using System.ComponentModel.DataAnnotations;
 
+using PetStore.Common;
 using PetStore.Models.Enumerations;
 
 namespace PetStore.Models
@@ -17,11 +18,12 @@ namespace PetStore.Models
         public string Id { get; set; }
 
         [Required]
-        [MinLength(3)]
+        [MinLength(GlobalConstants.ProductNameMinLength)]
         public string Name { get; set; }
 
         public ProductType ProductType { get; set; }
 
+        [Range(0, Double.MaxValue)]
         public decimal Price { get; set; }
     }
 }
