@@ -30,7 +30,6 @@ namespace PetStore.Models
 
         public string Notes { get; set; }
 
-
         public virtual ICollection<ClientProduct> ClientProducts { get; set; }
 
         public decimal TotalPrice => this.ClientProducts.Sum(cp => cp.Product.Price * cp.Quantity);

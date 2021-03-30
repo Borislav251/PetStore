@@ -1,5 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+
+using PetStore.Common;
 
 namespace PetStore.Models
 {
@@ -7,16 +11,24 @@ namespace PetStore.Models
     {
         [Required]
         [ForeignKey(nameof(Client))]
-        public int ClientId { get; set; }
+        public string ClientId { get; set; }
 
         public virtual Client Client { get; set; }
 
+
         [Required]
         [ForeignKey(nameof(Product))]
-        public int ProductId { get; set; }
+        public string ProductId { get; set; }
 
         public virtual Product Product { get; set; }
 
+
+        [Range(GlobalConstants.ClientProductMinQuantity, Int32.MaxValue)]
         public int Quantity { get; set; }
+
+        [Required]
+        [ForeignKey(nameof(Order))]
+        public string OrderId { get; set; }
+        public virtual Order Order { get; set; }
     }
 }

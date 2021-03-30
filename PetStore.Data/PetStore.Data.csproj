@@ -18,8 +18,4 @@
     <ProjectReference Include="..\PetStore.Models\PetStore.Models.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Profiles\" />
-  </ItemGroup>
-
 </Project>

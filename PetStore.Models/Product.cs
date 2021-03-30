@@ -23,7 +23,7 @@ namespace PetStore.Models
 
         public ProductType ProductType { get; set; }
 
-        [Range(0, Double.MaxValue)]
+        [Range(GlobalConstants.SellableMinPrice, Double.MaxValue)]
         public decimal Price { get; set; }
     }
 }

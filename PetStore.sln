@@ -5,9 +5,15 @@ VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetStore.Models", "PetStore.Models\PetStore.Models.csproj", "{A7164243-1CBA-4B0C-B8A0-0C806ECE711D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetStore.Data", "PetStore.Data\PetStore.Data.csproj", "{73D4B2C4-0A27-4452-A69D-10E714CE0426}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetStore.Data", "PetStore.Data\PetStore.Data.csproj", "{73D4B2C4-0A27-4452-A69D-10E714CE0426}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetStore.Common", "PetStore.Common\PetStore.Common.csproj", "{031F5156-A0BC-4B2F-8C98-CC60C4835561}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetStore.Common", "PetStore.Common\PetStore.Common.csproj", "{031F5156-A0BC-4B2F-8C98-CC60C4835561}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetStore.ConsoleApplication", "PetStore.ConsoleApplication\PetStore.ConsoleApplication.csproj", "{7971A31D-D87B-4CED-83D2-F0D621CD1D02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetStore.Services", "PetStore.Services\PetStore.Services.csproj", "{E7B4402F-06DA-436A-8ECD-A55761D2AE71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetStore.ServiceModels", "PetStore.ServiceModels\PetStore.ServiceModels.csproj", "{A25A05F9-0915-4BAF-A47C-F6BCC4CB7735}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +33,18 @@ Global
 		{031F5156-A0BC-4B2F-8C98-CC60C4835561}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{031F5156-A0BC-4B2F-8C98-CC60C4835561}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{031F5156-A0BC-4B2F-8C98-CC60C4835561}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7971A31D-D87B-4CED-83D2-F0D621CD1D02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7971A31D-D87B-4CED-83D2-F0D621CD1D02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7971A31D-D87B-4CED-83D2-F0D621CD1D02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7971A31D-D87B-4CED-83D2-F0D621CD1D02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7B4402F-06DA-436A-8ECD-A55761D2AE71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7B4402F-06DA-436A-8ECD-A55761D2AE71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7B4402F-06DA-436A-8ECD-A55761D2AE71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7B4402F-06DA-436A-8ECD-A55761D2AE71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A25A05F9-0915-4BAF-A47C-F6BCC4CB7735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A25A05F9-0915-4BAF-A47C-F6BCC4CB7735}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A25A05F9-0915-4BAF-A47C-F6BCC4CB7735}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A25A05F9-0915-4BAF-A47C-F6BCC4CB7735}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -26,5 +26,11 @@ namespace PetStore.Data
 
             base.OnConfiguring(optionsBuilder);
         }
+
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(PetStoreDbContext).Assembly);
+        }
     }
 }

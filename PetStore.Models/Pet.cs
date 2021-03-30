@@ -24,8 +24,12 @@ namespace PetStore.Models
 
         public Gender Gender { get; set; }
 
+        [Range(GlobalConstants.PetMinAge, GlobalConstants.PetMaxAge)]
+        public int Age { get; set; }
+
         public bool IsSold { get; set; }
 
+        [Range(GlobalConstants.SellableMinPrice, Double.MaxValue)]
         public decimal Price { get; set; }
 
         [Required]
@@ -33,9 +37,9 @@ namespace PetStore.Models
         public int BreedId { get; set; }
         public virtual Breed Breed { get; set; }
 
-        [ForeignKey(nameof(Breed))]
-        public string ClientId { get; set; }
 
+        [ForeignKey(nameof(Client))]
+        public string ClientId { get; set; }
         public virtual Client Client { get; set; }
     }
 }
