@@ -1,14 +1,21 @@
-﻿using AutoMapper;
+﻿using System;
+using System.Linq;
+using System.Collections.Generic;
+
+using AutoMapper;
+using AutoMapper.QueryableExtensions;
+
 using PetStore.Common;
 using PetStore.Data;
 using PetStore.Models;
 using PetStore.Models.Enumerations;
 using PetStore.ServiceModels.Products.InputModels;
-using System;
+using PetStore.ServiceModels.Products.OutputModels;
+using PetStore.Services.Interfaces;
 
 namespace PetStore.Services
 {
-    public class ProductService
+    public class ProductService : IProductService
     {
         private readonly PetStoreDbContext dbContext;
         private readonly IMapper mapper;
@@ -27,7 +34,19 @@ namespace PetStore.Services
             this.dbContext.SaveChanges();
         }
 
-        public void ListAllByProductType(string type)
+        public ICollection<ListAllProductsServiceModel> GetAll()
+        {
+            var products =
+                this.dbContext
+                    .Products
+                    .ProjectTo<ListAllProductsServiceModel>
+                    (this.mapper.ConfigurationProvider)
+                    .ToList();
+
+            return products;
+        }
+
+        public ICollection<ListAllProductsByProductTypeServiceModel> ListAllByProductType(string type)
         {
             ProductType productType;
 
@@ -37,6 +56,16 @@ namespace PetStore.Services
             {
                 throw new ArgumentException(ExceptionMessages.InvalidProductType);
             }
+
+            var productsServiceModels =
+                this.dbContext
+                    .Products
+                    .Where(p => p.ProductType == productType)
+                    .ProjectTo<ListAllProductsByProductTypeServiceModel>
+                    (this.mapper.ConfigurationProvider)
+                    .ToList();
+
+            return productsServiceModels;
         }
     }
 }

@@ -12,6 +12,9 @@ namespace PetStore.Data.Configurations
         public void Configure(EntityTypeBuilder<Product> builder)
         {
             builder
+                .HasAlternateKey(p => p.Name);
+                
+            builder
                 .Property(p => p.Name)
                 .HasMaxLength(GlobalConstants.ProductNameMaxLength)
                 .IsUnicode(true);
