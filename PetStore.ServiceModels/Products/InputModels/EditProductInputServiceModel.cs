@@ -1,4 +1,5 @@
 ﻿using System;
+
 using System.ComponentModel.DataAnnotations;
 
 using PetStore.Common;
@@ -6,7 +7,7 @@ using PetStore.Models.Enumerations;
 
 namespace PetStore.ServiceModels.Products.InputModels
 {
-    public class AddProductInputServiceModel
+    public class EditProductInputServiceModel
     {
         [Required]
         [MinLength(GlobalConstants.ProductNameMinLength)]

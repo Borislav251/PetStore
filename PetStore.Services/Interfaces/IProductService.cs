@@ -12,5 +12,13 @@ namespace PetStore.Services.Interfaces
         ICollection<ListAllProductsServiceModel> GetAll();
 
         ICollection<ListAllProductsByProductTypeServiceModel> ListAllByProductType(string type);
+
+        ICollection<ListAllProductsByNameServiceModel> SearchByName(string searchStr, bool caseSensitive);
+
+        bool RemoveById(string id);
+
+        bool RemoveByName(string name);
+
+        void EditProduct(string id, EditProductInputServiceModel model);
     }
 }

@@ -32,6 +32,7 @@ namespace PetStore.Models
         [Range(GlobalConstants.SellableMinPrice, Double.MaxValue)]
         public decimal Price { get; set; }
 
+
         [Required]
         [ForeignKey(nameof(Breed))]
         public int BreedId { get; set; }
